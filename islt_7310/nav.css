@@ -1,32 +1,18 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-</style>
-</head>
-<body>
-  <ul>
-      <li><a href="https://alr9kf.github.io/islt_7310/index.html">Home</a> </li>
-      <li><a href="https://alr9kf.github.io/islt_7310/About.html">About</a> </li>
-      <li><">#projects</a> </li>
-      <li><class="html"></div></a></li>
-</ul>
+  <head>
+        <meta charset="utf-8">
+        <title>Navigation</title>
+        <style>
+        ul li {
+        display: inline-block;
+        border: 3px dotted magenta;
+        width: 150px;
+        list-style-type: none;
+        padding: 15px 15px 15px 25px;
+        margin-top: 0;
+        margin-left: 10px;
+        }
+        
+        
+        </style>
+    </head>
+    <body>
