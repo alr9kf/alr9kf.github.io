@@ -3,7 +3,7 @@ nav {
   overflow: hidden;
 }
 nav a {
-  float: left;
+  float: center;
   color: #f2f2f2;
   text-align: center;
   padding: 15px 15px 15px 25px;
