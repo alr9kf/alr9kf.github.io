@@ -1,16 +1,16 @@
 nav ul {
     background-color: #020202;
     overflow: hidden;
-    list-style-type: none
+    list-style-type:none
   }
   nav li {
     float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    margin:auto; 
-    border: auto;
-    display:auto;
+    color:darkorange;
+    text-align:left
+    paddingactive
+    marginactive
+    borderactive
+    displayactive
     text-decoration: none;
     font-size: 17px;
     background-color: #ddd;
