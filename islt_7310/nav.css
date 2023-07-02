@@ -2,7 +2,7 @@ nav {
   background-color: #020202;
   overflow: hidden;
 }
-nav a {
+nav li{
   float: center;
   color: #f2f2f2;
   text-align: center;
