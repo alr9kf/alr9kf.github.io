@@ -1,9 +1,9 @@
  ul li {
         display: inline;
-        border: 3px dotted black;
+        border: 3px solid black;
         width: 150px;
         list-style-type: none;
-        padding: 15px 15px 15px 25px;
+        padding: 15px 15px;
         margin-bottom: 5px;
         }
         
