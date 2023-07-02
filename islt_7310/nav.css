@@ -1,11 +1,9 @@
-ul {
- border: 3px solid black;
-}
-li {
-    display: inline;
-    width: 150px;
-    list-style-type: none;
-    padding: 15px 15px; 
-    margin-bottom: 5px;
+ul li {
+  border: 3px solid black;
+  display: inline;
+  width: 150px;
+  list-style-type: none;
+  padding: 15px 15px; 
+  margin-bottom: 5px;
 }
         
