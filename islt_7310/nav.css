@@ -6,11 +6,11 @@ nav ul {
   nav li {
     float: left;
     color:darkorange;
-    text-align:left
-    paddingactive
-    marginactive
-    borderactive
-    displayactive
+    text-align:center
+    padding: 35px 35px 35px 35px;
+    margin:-top: 0; 
+    border: none;
+    display:inline 
     text-decoration: none;
     font-size: 17px;
     background-color: #ddd;
