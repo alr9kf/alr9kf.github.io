@@ -1,7 +1,39 @@
 body {
-  background-color: yellow;
+    background-color: yellow;
 }
+
 h1 {
-  color: blue;
-  margin-right: 30px;
+    color: blue;
+    margin-right: 30px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper > header {
+    order: 1;
+    background: orange;
+}
+
+.wrapper > nav {
+    order: 2;
+    background: lightblue;
+}
+
+.wrapper > main {
+    order: 3;
+    flex-grow: 1;
+    background: lightgreen;
+}
+
+.wrapper > aside {
+    order: 4;
+    background: lightpink;
+}
+
+.wrapper > footer {
+    order: 5;
+    background: lightgray;
 }
