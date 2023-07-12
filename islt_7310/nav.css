@@ -41,3 +41,32 @@
 #nav_menu ul li a.current {
     color: yellow;
 }
+
+/* For mobile screens */
+.nav-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #nav_menu ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    #nav_menu ul li {
+        float: none;
+    }
+
+    #nav_menu ul li a {
+        width: 100%;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}<script>
+function toggleNav() {
+    var nav = document.getElementById('nav_menu');
+    nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+}
+</script>
