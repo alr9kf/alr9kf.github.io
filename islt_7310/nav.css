@@ -1,16 +1,17 @@
-#nav_menu ul {
+.nav-menu ul {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-#nav_menu ul li {
-    float: left;
+.nav-menu ul li {
     position: relative;
 }
 
-#nav_menu ul li a {
+.nav-menu ul li a {
     text-align: center;
     display: block;
-    width: 175px;
     padding: 1em 0;
     margin: auto;
     text-decoration: none;
@@ -20,53 +21,51 @@
     border-right: 2px solid white;
 }
 
-#nav_menu ul li a:hover {
+.nav-menu ul li a:hover {
     background-color: darkblue;
 }
 
-#nav_menu ul ul {
+.nav-menu ul ul {
     display: none;
     position: absolute;
     top: 100%;
 }
 
-#nav_menu ul li:hover > ul {
+.nav-menu ul li:hover > ul {
     display: block;
 }
 
-#nav_menu ul li a.lastitem {
+.nav-menu ul li a.lastitem {
     border-right: none;
 }
 
-#nav_menu ul li a.current {
+.nav-menu ul li a.current {
     color: yellow;
 }
 
-/* For mobile screens */
 .nav-toggle {
     display: none;
 }
 
 @media screen and (max-width: 600px) {
-    #nav_menu ul {
+    .nav-menu ul {
         display: none;
         flex-direction: column;
     }
 
-    #nav_menu ul li {
-        float: none;
+    .nav-menu ul li {
+        display: block;
     }
 
-    #nav_menu ul li a {
+    .nav-menu ul li a {
         width: 100%;
     }
 
     .nav-toggle {
         display: block;
     }
-}<script>
-function toggleNav() {
-    var nav = document.getElementById('nav_menu');
-    nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+}function toggleNav() {
+    var nav = document.querySelector('.nav-menu ul');
+    var displayStatus = window.getComputedStyle(nav).display;
+    nav.style.display = displayStatus === 'none' ? 'block' : 'none';
 }
-</script>

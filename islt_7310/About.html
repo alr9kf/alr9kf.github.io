@@ -2,6 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
         body {
@@ -10,13 +11,6 @@
             height: 100vh;
             margin: 0;
             padding: 1em;
-        }
-
-        nav ul {
-            display: flex;
-            flex-direction: row;
-            list-style-type: none;
-            padding: 0;
         }
 
         nav ul {
@@ -36,15 +30,36 @@
                 padding: 0.5em;
             }
 
+            nav ul {
+                flex-direction: column;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background-color: #333;
+                top: 0;
+                left: -100%;
+                transition: left 0.5s ease;
+            }
+
             nav ul li {
-                margin-right: 0.5em;
+                margin: 0;
+                padding: 1em;
+                color: #fff;
+            }
+
+            nav ul.showMenu {
+                left: 0;
+            }
+
+            #mobile-menu-btn {
+                display: block;
             }
         }
-    </style>
 
-        nav ul li {
-            margin-right: 1em;
+        #mobile-menu-btn {
+            display: none;
         }
+
     </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav.css">
@@ -52,7 +67,8 @@
 <body>
     <header>
         <nav id="nav_menu">
-            <ul>
+            <button id="mobile-menu-btn">☰</button>
+            <ul id="menu">
                 <li><a href="https://alr9kf.github.io/islt_7310/index.html">Home</a></li>
                 <li><a href="https://alr9kf.github.io/islt_7310/About.html">About</a></li>
                 <li><a href="#projects.html">Projects</a></li>
@@ -63,31 +79,33 @@
         <h2>About Me</h2>
     </header>
     <main>
-        <p> Hello Everyone, my name is Alex Reddy and I am from Massachusetts. 
-            Although I recently moved to Kansas City last month, I am in my second to last semester at the University of Missouri. 
-            My program of study is the Education Specialist degree with a focus in online education as an online student. 
-            Prior to this, I studied at various colleges where I learned about criminal justice, education, and sustainability. 
-            <br>
-            <br>
-            I was not a great student in high school. Instead I come from a background of working in retail, fast-food, law enforcement, non-profit, and finance. 
-            I currently work for Oracle as a Learner Leader. When I am not working or engaged as a graduate student, I enjoy talking to my family and occasionally bowling.  
-            My limited experience with HTML, comes from using HTML 4 in high school which was challenging. 
-            Yet, I look forward to seeing what I can learn about HTML 5 and working alongside all of you. </p>
-        <h3>Education Credentials</h3>
-        <p>North Shore Community College- Associates of Arts in Liberal Arts, 2011</p>  
-        <p> Salem State University- Bachelors of Science in Criminal Justice Administration, 2013 </p>
-        <p> Gordon College, Masters of Education in Secondary Education, 2017</p>
-        <p> Tufts University, Certificate of Advanced Graduate Studies, Urban Justice and Sustainability, 2020 </p>
-        <p> University of Missouri, Education Specialist in Learning, Design, and Technology, 2023 </p>
-        <blockquote>"An <strong>investment</strong> in <em>knowledge</em> pays the <em>best</em> interest"<br>
-        <strong>Benjamin Franklin</strong>
-        </blockquote>
-        <img src="alex_reddy_pic.jpg" alt="not_found.jpg" width="300" height="300">
-        <p><a href="AlexanderReddyResume.pdf">Link to my resume</a></p>
-    </main>
-    <footer>
-        Copyright 2023 by Alex Reddy
-        <p>Email: alr9kf@umsystem.edu</p>
-    </footer>
-</body>
-</html>
+        
+        <main>
+            <p> Hello Everyone, my name is Alex Reddy and I am from Massachusetts. 
+                Although I recently moved to Kansas City last month, I am in my second to last semester at the University of Missouri. 
+                My program of study is the Education Specialist degree with a focus in online education as an online student. 
+                Prior to this, I studied at various colleges where I learned about criminal justice, education, and sustainability. 
+                <br>
+                <br>
+                I was not a great student in high school. Instead I come from a background of working in retail, fast-food, law enforcement, non-profit, and finance. 
+                I currently work for Oracle as a Learner Leader. When I am not working or engaged as a graduate student, I enjoy talking to my family and occasionally bowling.  
+                My limited experience with HTML, comes from using HTML 4 in high school which was challenging. 
+                Yet, I look forward to seeing what I can learn about HTML 5 and working alongside all of you. </p>
+            <h3>Education Credentials</h3>
+            <p>North Shore Community College- Associates of Arts in Liberal Arts, 2011</p>  
+            <p> Salem State University- Bachelors of Science in Criminal Justice Administration, 2013 </p>
+            <p> Gordon College, Masters of Education in Secondary Education, 2017</p>
+            <p> Tufts University, Certificate of Advanced Graduate Studies, Urban Justice and Sustainability, 2020 </p>
+            <p> University of Missouri, Education Specialist in Learning, Design, and Technology, 2023 </p>
+            <blockquote>"An <strong>investment</strong> in <em>knowledge</em> pays the <em>best</em> interest"<br>
+            <strong>Benjamin Franklin</strong>
+            </blockquote>
+            <img src="alex_reddy_pic.jpg" alt="not_found.jpg" width="300" height="300">
+            <p><a href="AlexanderReddyResume.pdf">Link to my resume</a></p>
+        </main>
+        <footer>
+            Copyright 2023 by Alex Reddy
+            <p>Email: alr9kf@umsystem.edu</p>
+        </footer>
+    </body>
+    </html>
