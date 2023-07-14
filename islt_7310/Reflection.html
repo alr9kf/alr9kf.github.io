@@ -127,15 +127,13 @@
     </p>
     <footer>
         Copyright 2023 by Alex Reddy
-        <p>
-        Email: alr9kf@umsystem.edu 
-        </p>
+        <p>Email: alr9kf@umsystem.edu</p>
     </footer>
     <script>
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('menu');
 
-        mobileMenuBtn.addEventListener('click', function() {
+        btn.addEventListener('click', () => {
             menu.classList.toggle('showMenu');
         });
     </script>
