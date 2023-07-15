@@ -36,6 +36,9 @@ h1 {
 .wrapper > footer {
     order: 5;
     background: lightgray;
+    background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Mobile Navigation Styles */
