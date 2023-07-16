@@ -25,6 +25,26 @@
             margin-right: 1em;
         }
 
+        /* dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* dropdown items hidden by default */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        /* show dropdown items on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         footer {
             background-color: lightgray;
             padding: 1em;
@@ -83,11 +103,18 @@
             <ul id="menu">
                 <li><a href="https://alr9kf.github.io/islt_7310/index.html">Home</a></li>
                 <li><a href="https://alr9kf.github.io/islt_7310/About.html">About</a></li>
-                <li><a href="https://alr9kf.github.io/islt_7310/project.html">Projects</a></li>
+                <li class="dropdown"><a href="javascript:void(0)">Projects</a>
+                    <div class="dropdown-content">
+                        <a href="https://sites.google.com/view/alex-reddy12/project-1-digital-images">Digital Images</a>
+                        <a href="https://sites.google.com/view/alex-reddy12/project-2-digital-audio">Digital Audio</a>
+                        <a href="https://sites.google.com/view/alex-reddy12/project-3-digital-video">Digital Video</a>
+                        <a href="https://sites.google.com/view/alex-reddy12/project-4-digital-virtual-reality">Digital Virtual Reality</a>
+                    </div>
+                </li>
                 <li><a href="https://alr9kf.github.io/islt_7310/Reflection.html">Reflection</a></li>
             </ul>
         </nav>
-
+    </header>
     <strong>Thinking about Burnout and What to Do About It Projects</strong>
     <P>
         Directions: To access the projects that I have created on google sites, click on one of the links below. Alternatively you may also copy and paste one link into your web browser.
@@ -98,9 +125,13 @@
     <p><b>Digital Video-</b> <a href="https://sites.google.com/view/alex-reddy12/project-3-digital-video">Visit Project 3</a></p>
     <p><b>Digital Virtual Reality-</b> <a href="https://sites.google.com/view/alex-reddy12/project-4-digital-virtual-reality">Visit Project 4</a></p>
     <footer>
-        Copyright 2023 by Alex Reddy
-        <p>Email: <a href="mailto:alr9kf@umsystem.edu">alr9kf@umsystem.edu</a></p>
-    </footer>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('showMenu');
+        });
+    </script>
 </body>
 </html>
-
