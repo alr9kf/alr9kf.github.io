@@ -24,6 +24,26 @@
             margin-right: 1em;
         }
 
+        /* dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* dropdown items hidden by default */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        /* show dropdown items on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         /* Media Query for screens smaller than 600px */
         @media (max-width: 600px) {
             body {
@@ -73,6 +93,34 @@
                 <li><a href="https://alr9kf.github.io/islt_7310/About.html">About</a></li>
                 <li><a href="https://alr9kf.github.io/islt_7310/project.html">Projects</a></li>
                 <li><a href="https://alr9kf.github.io/islt_7310/Reflection.html">Reflection</a></li>
+                <!-- Dropdown Menu 1 -->
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Dropdown 1</a>
+                    <div class="dropdown-content">
+                        <a href="#">Item 1</a>
+                        <a href="#">Item 2</a>
+                        <a href="#">Item 3</a>
+                    </div>
+                </li>
+                <!-- Dropdown Menu 2 -->
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Dropdown 2</a>
+                    <div class="dropdown-content">
+                        <a href="#">Item 1</a>
+                        <a href="#">Item 2</a>
+                        <a href="#">Item 3</a>
+                    </div>
+                </li>
+                <!-- Dropdown Menu 3 -->
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Dropdown 3</a>
+                    <div class="dropdown-content">
+                        <a href="#">Project 1</a>
+                        <a href="#">Project 2</a>
+                        <a href="#">Project 3</a>
+                        
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
