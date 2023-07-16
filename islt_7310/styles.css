@@ -72,6 +72,7 @@ h1 {
 nav ul {
     display: flex;
     flex-direction: row;
+    justify-content: center; /* added */
     list-style-type: none;
     padding: 0;
 }
@@ -108,7 +109,8 @@ nav ul li {
         top: 0;
         left: -100%;
         transition: left 0.5s ease;
-    
+        justify-content: center; /* added */
+        align-items: center; /* added */
     }
 
     nav ul li {
