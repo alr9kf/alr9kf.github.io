@@ -39,6 +39,12 @@ h1 {
     background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');
     background-size: cover;
     background-position: center;
+    transition: background-color 0.3s ease;
+}
+
+.wrapper > footer:hover {
+    background-color: #ccc;
+    cursor: pointer;
 }
 
 /* Mobile Navigation Styles */
