@@ -1,0 +1,119 @@
+    <!DOCTYPE html>
+    <html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Me</title>
+        <link rel="icon" href="https://alr9kf.github.io/islt_7310/heart_icon.png">
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                margin: 0;
+                padding: 1em;
+            }
+    
+            nav ul {
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                padding: 0;
+            }
+    
+            nav ul li {
+                margin-right: 1em;
+            }
+    
+            footer {
+                background-color: lightgray;
+                padding: 1em;
+                text-align: center;
+                color: white;
+            }
+    
+            footer p {
+                margin: 0;
+            }
+    
+            /* Media Query for screens smaller than 600px */
+            @media (max-width: 600px) {
+                body {
+                    padding: 0.5em;
+                }
+    
+                nav ul {
+                    flex-direction: column;
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #333;
+                    top: 0;
+                    left: -100%;
+                    transition: left 0.5s ease;
+                }
+    
+                nav ul li {
+                    margin: 0;
+                    padding: 1em;
+                    color: #fff;
+                }
+    
+                nav ul.showMenu {
+                    left: 0;
+                }
+    
+                #mobile-menu-btn {
+                    display: block;
+                }
+            }
+    
+            #mobile-menu-btn {
+                display: none;
+            }
+    
+        </style>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="nav.css">
+    </head>
+    <body>
+<h1>
+    Burnout With Pictures
+</h1>
+<h2>
+Introduction and Learning Objective
+</h2>
+<p>Introduction: Hello and welcome to this module that focuses on burnout, where we identify burnout through various pictures. With the ever changing work environment, many companies are implementing reduction in force plans (RIF). This in turn can lead to employees that are left behind taking on more job responsibilities. As a result of taking on too much work, people can experience burnout, which can lead to serious emotional, physical, spiritual and psychological consequences. ​
+</p>
+Learning Objective: When given different pictures that depict negative energy, the learner will be able to identify signs and symptoms of potential employee burnout.
+
+        <header>
+            <nav id="nav_menu">
+                <button id="mobile-menu-btn">☰</button>
+                <ul id="menu">
+                    <li><a href="https://alr9kf.github.io/islt_7310/index.html">Home</a></li>
+                    <li><a href="https://alr9kf.github.io/islt_7310/About.html">About</a></li>
+                    <li><a href="https://alr9kf.github.io/islt_7310/project.html">Projects</a></li>
+                    <li><a href="https://alr9kf.github.io/islt_7310/Reflection.html">Reflection</a></li>
+                </ul>
+            </nav>
+            <footer style="background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+                <p>
+                    <i class="fas fa-heart"></i> 
+                    &copy; 2023 by Alex Reddy 
+                    <i class="fas fa-envelope"></i> 
+                </p>
+                <p><img src="https://alr9kf.github.io/islt_7310/email_icon.png" alt="Email Icon" style="width:20px; height:20px;"> Email: <a href="mailto:alr9kf@umsystem.edu">alr9kf@umsystem.edu</a></p>
+                <p><img src="https://alr9kf.github.io/islt_7310/phone_icon.png" alt="Phone Icon" style="width:20px; height:20px;"> Phone: 888-888-8888</p>
+            </footer>
+            <script>
+                const btn = document.getElementById('mobile-menu-btn');
+                const menu = document.getElementById('menu');
+        
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('showMenu');
+                });
+            </script>
+        </body>
+</html>
