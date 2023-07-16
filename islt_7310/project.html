@@ -140,10 +140,15 @@
         <script>
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('menu');
-    
+            
             btn.addEventListener('click', () => {
                 menu.classList.toggle('showMenu');
             });
+        
+            function toggleNav() {
+                var nav = document.querySelector('.nav-menu ul');
+                var displayStatus = window.getComputedStyle(nav).display;
+                nav.style.display = displayStatus === 'none' ? 'block' : 'none';
+            }
         </script>
-    </body>
     </html>

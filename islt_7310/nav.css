@@ -64,8 +64,4 @@
     .nav-toggle {
         display: block;
     }
-}function toggleNav() {
-    var nav = document.querySelector('.nav-menu ul');
-    var displayStatus = window.getComputedStyle(nav).display;
-    nav.style.display = displayStatus === 'none' ? 'block' : 'none';
 }
