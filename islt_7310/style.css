@@ -1,5 +1,10 @@
 body {
   background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 1em;
 }
 
 h1 {
@@ -114,4 +119,55 @@ nav ul li {
 
 .wrapper > footer > i:hover {
   animation: icon-zoom 1s alternate;
+}
+
+footer {
+  background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+footer {
+  animation: fade-in 1s;
+}
+
+footer.fade-out {
+  animation: fade-out 1s;
+}
+
+/* Additional CSS code */
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+footer i {
+  margin-right: 5px;
+}
+
+footer img {
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
 }
