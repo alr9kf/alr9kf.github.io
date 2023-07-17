@@ -69,11 +69,35 @@
                 color: #000;
             }
 
-            nav, #mobile-menu-btn {
+            nav,
+            #mobile-menu-btn {
                 display: none;
             }
         }
 
+        footer {
+            background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');
+        }
+
+        @keyframes icon-zoom {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        footer i {
+            animation: icon-zoom 3s infinite;
+        }
+
+        footer i:hover {
+            animation: icon-zoom 1s alternate;
+        }
     </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -119,7 +143,7 @@
         <p><a href="AlexanderReddyResume.pdf">Link to my resume</a></p>
         <iframe allowfullscreen="allowfullscreen" frameborder="no" width="768" height="432" src="https://app.wideo.co/embed/39598081689300262720?width=768&height=432&repeat=false&autoplay=false&hideControls=false"></iframe>
     </main>
-    <footer style="background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');">
+    <footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
         <p>
           <i class="fas fa-heart w3-animate-zooming"></i> 
@@ -129,21 +153,14 @@
         <p><img class="w3-animate-fading" src="https://alr9kf.github.io/islt_7310/email_icon.png" alt="Email Icon" style="width:20px; height:20px;"> Email: <a href="mailto:alr9kf@umsystem.edu">alr9kf@umsystem.edu</a></p>
         <p><img class="w3-animate-fading" src="https://alr9kf.github.io/islt_7310/phone_icon.png" alt="Phone Icon" style="width:20px; height:20px;"> Phone: 888-888-8888</p>
         <p>Email: alr9kf@umsystem.edu</p>
-      </footer>
+    </footer>
     <script>
-        function toggleNav() {
-            var nav = document.querySelector('nav ul');
-            nav.classList.toggle('showMenu');
-                
-                btn.addEventListener('click', () => {
-                    menu.classList.toggle('showMenu');
-                });
-            
-                function toggleNav() {
-                    var nav = document.querySelector('.nav-menu ul');
-                    var displayStatus = window.getComputedStyle(nav).display;
-                    nav.style.display = displayStatus === 'none' ? 'block' : 'none';
-                }
-            </script>
+        var btn = document.getElementById('mobile-menu-btn');
+        var menu = document.getElementById('menu');
+
+        btn.addEventListener('click', function() {
+            menu.classList.toggle('showMenu');
+        });
+    </script>
 </body>
 </html>
