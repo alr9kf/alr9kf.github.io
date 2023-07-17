@@ -123,3 +123,20 @@ nav ul li {
         left: 0;
     }
 }
+
+@-webkit-keyframes fading {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fading {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.w3-animate-fading {
+    -webkit-animation: fading 3s infinite;
+    animation: fading 3s infinite;
+}
