@@ -36,23 +36,6 @@ h1 {
 .wrapper > footer {
   order: 5;
   background: lightgray;
-  @keyframes icon-zoom {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-     }
-  }
-  
-  .wrapper > footer > i {
-    animation: icon-zoom 3s infinite;
-  }
-
-
 }
 
 /* Mobile Navigation Styles */
@@ -74,41 +57,61 @@ nav ul li {
 
 @media (max-width: 600px) {
   body {
-      padding: 0.5em;
+    padding: 0.5em;
   }
 
   .wrapper {
-      position: relative;
-      min-height: 100vh;
+    position: relative;
+    min-height: 100vh;
   }
 
   #mobile-menu-btn {
-      display: block;
-      position: absolute;
-      top: 1em;
-      right: 1em;
-      font-size: 1.5em;
-      cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
   }
 
   nav ul {
-      flex-direction: column;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: #333;
-      top: 0;
-      left: -100%;
-      transition: left 0.5s ease;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    top: 0;
+    left: -100%;
+    transition: left 0.5s ease;
   }
 
   nav ul li {
-      margin: 0;
-      padding: 1em;
-      color: #fff;
+    margin: 0;
+    padding: 1em;
+    color: #fff;
   }
 
   nav ul.showMenu {
-      left: 0;
+    left: 0;
   }
+}
+
+@keyframes icon-zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.wrapper > footer > i {
+  animation: icon-zoom 3s infinite;
+}
+
+.wrapper > footer > i:hover {
+  animation: icon-zoom 1s alternate;
 }
