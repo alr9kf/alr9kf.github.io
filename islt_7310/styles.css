@@ -36,6 +36,23 @@ body {
   .wrapper > footer {
     order: 5;
     background: lightgray;
+    @keyframes icon-zoom {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+       }
+    }
+    
+    .wrapper > footer > i {
+      animation: icon-zoom 3s infinite;
+    }
+  
+  
   }
   
   /* Mobile Navigation Styles */
