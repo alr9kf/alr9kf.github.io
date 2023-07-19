@@ -99,11 +99,11 @@ nav ul li {
   }
 }
 
-.footer-icon {
+#footer-icon {
   transition: transform 0.3s ease-in-out;
 }
 
-.footer-icon:hover {
+#footer-icon:hover {
   transform: scale(1.3);
 }
 
@@ -130,3 +130,4 @@ footer a {
   text-decoration: none;
   color: #333;
 }
+
