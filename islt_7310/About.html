@@ -19,11 +19,40 @@
             list-style-type: none;
             padding: 0;
         }
-        p {
-            font-family: 'Open Sans', sans-serif;
-        }
+
         nav ul li {
             margin-right: 1em;
+        }
+
+        /* dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* dropdown items hidden by default */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        /* show dropdown items on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        footer {
+            background-color: lightgray;
+            padding: 1em;
+            text-align: center;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
         }
 
         /* Media Query for screens smaller than 600px */
@@ -62,73 +91,6 @@
             display: none;
         }
 
-        /* Media Query for print */
-        @media print {
-            body {
-                background-color: #fff;
-                color: #000;
-            }
-
-            nav,
-            #mobile-menu-btn {
-                display: none;
-            }
-        }
-
-        footer {
-            background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');
-            animation: fade-in 1s;
-        }
-
-        footer.fade-out {
-            animation: fade-out 1s;
-        }
-
-        @keyframes icon-zoom {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes fade-in {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fade-out {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-
-        footer i {
-            animation: icon-zoom 3s infinite;
-        }
-
-        footer i:hover {
-            animation: icon-zoom 1s alternate;
-        }
-
-        footer p {
-            animation: fade-in 1s;
-        }
-
-        footer.fade-out p {
-            animation: fade-out 1s;
-        }
     </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
