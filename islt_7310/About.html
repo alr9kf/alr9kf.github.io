@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <link rel="icon" href="https://alr9kf.github.io/islt_7310/heart_icon.png">
     <style>
         body {
             display: flex;
@@ -11,12 +12,6 @@
             height: 100vh;
             margin: 0;
             padding: 1em;
-            overflow-x: hidden;
-        }
-
-        header {
-            position: relative;
-            z-index: 2;
         }
 
         nav ul {
@@ -30,11 +25,13 @@
             margin-right: 1em;
         }
 
+        /* dropdown container */
         .dropdown {
             position: relative;
             display: inline-block;
         }
 
+        /* dropdown items hidden by default */
         .dropdown-content {
             display: none;
             position: absolute;
@@ -43,24 +40,22 @@
             z-index: 1;
         }
 
+        /* show dropdown items on hover */
         .dropdown:hover .dropdown-content {
             display: block;
         }
 
+        /* Media Query for screens smaller than 600px */
         @media (max-width: 600px) {
             body {
                 padding: 0.5em;
-            }
-
-            body.showMenu {
-                overflow: hidden;
             }
 
             nav ul {
                 flex-direction: column;
                 position: fixed;
                 width: 100%;
-                height: 100vh;
+                height: 100%;
                 background-color: #333;
                 top: 0;
                 left: -100%;
@@ -87,6 +82,8 @@
         }
 
     </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
 <body>
     <header>
