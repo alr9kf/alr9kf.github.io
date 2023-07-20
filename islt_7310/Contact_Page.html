@@ -125,12 +125,17 @@
     </header>
     <section class="contact-form">
         <form action="contact_process.php" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
+            *Required <input type="text" name="first_name" placeholder="First Name" required>
+            *Required <input type="text" name="last_name" placeholder="Last Name" required>
+            *Required <input type="email" name="email" placeholder="Your Email" required>
+            *Required <input type="text" name="subject" value="Portfolio/Professional Website Contact" required>
+            *Required <textarea name="message" placeholder="Your Message" required></textarea>
             <input type="submit" value="Submit">
         </form>
-    </section>
+        <a href="mailto:alr9kf@umsystem.edu?subject=Portfolio/Professional Website Contact">
+            <button type="button">Email me directly</button>
+        </a>
+       </section>
     <footer style="background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');">
         <footer class="fade-in">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
