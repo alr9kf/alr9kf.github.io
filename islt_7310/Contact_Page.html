@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Contact Me</title>
     <link rel="icon" href="https://alr9kf.github.io/islt_7310/heart_icon.png">
     <style>
-        body {
+      body {
             display: flex;
             flex-direction: column;
             height: 100vh;
@@ -81,11 +81,35 @@
             display: none;
         }
 
+        /* styles for contact form */
+        .contact-form {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .contact-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
     </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav.css">
 </head>
 <body>
+    <!-- existing elements -->
+
     <header>
         <nav id="nav_menu">
             <button id="mobile-menu-btn">☰</button>
@@ -97,16 +121,19 @@
                 <li><a href="Contact_Page.html">Contact_Page</a></li>
             </ul>
         </nav>
+        <h1>Alexander Reddy</h1>
+        <h2>Contact Me</h2>
+        <h2>Contact Me</h2>
     </header>
-    <strong>Thinking about Burnout and What to Do About It Projects</strong>
-    <P>
-        Directions: To access the projects that I have created on google sites, click on one of the links below. Alternatively you may also copy and paste one link into your web browser.
-        Once you are on the google site, the pages are all connected to each other for easy access and navigation. 
-    </P>
-    <p><b>Digital Images-</b> <a href="https://sites.google.com/view/alex-reddy12/project-1-digital-images">Visit Project 1</a></p>
-    <p><b>Digital Audio-</b> <a href="https://sites.google.com/view/alex-reddy12/project-2-digital-audio">Visit Project 2</a></p>
-    <p><b>Digital Video-</b> <a href="https://sites.google.com/view/alex-reddy12/project-3-digital-video">Visit Project 3</a></p>
-    <p><b>Digital Virtual Reality-</b> <a href="https://sites.google.com/view/alex-reddy12/project-4-digital-virtual-reality">Visit Project 4</a></p>
+    <section class="contact-form">
+        <form action="contact_process.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <footer style="background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');">
         <footer class="fade-in">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
                 <p>
@@ -118,13 +145,13 @@
                 <p><img class="w3-animate-fading" <img id="footer-icon" src="phone_icon.png" alt=""> Phone: 888-888-8888</p>
                 <footer class="fade-in"></footer>
             </footer>
-            <script>
-                var btn = document.getElementById('mobile-menu-btn');
+    <script>
+              var btn = document.getElementById('mobile-menu-btn');
                 var menu = document.getElementById('menu');
         
                 btn.addEventListener('click', function() {
                     menu.classList.toggle('showMenu');
                 });
             </script>
-        </body>
-        </html>
+</body>
+</html>
