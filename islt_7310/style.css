@@ -129,5 +129,46 @@ footer img {
 footer a {
   text-decoration: none;
   color: #333;
+  /* styles for table */
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
+/* styles for the first and last row of table */
+tbody tr:first-child,
+tbody tr:last-child {
+    background-color: red;
+}
+
+/* styles for responsive table */
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 1em;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+
+    td {
+        display: block;
+        text-align: right;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    td::before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
