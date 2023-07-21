@@ -6,6 +6,23 @@
     <title>Contact Me</title>
     <link rel="icon" href="https://alr9kf.github.io/islt_7310/heart_icon.png">
     <style>
+        tr:last-child {
+    background-color: red;
+        }
+<table>
+  <tr>
+    <td>Data 1.1</td>
+    <td>Data 1.2</td>
+  </tr>
+  <tr>
+    <td>Data 2.1</td>
+    <td>Data 2.2</td>
+  </tr>
+  <tr> <!-- This is the last row, which will be colored red -->
+    <td>Data 3.1</td>
+    <td>Data 3.2</td>
+  </tr>
+      
       body {
             display: flex;
             flex-direction: column;
@@ -161,6 +178,19 @@ table, th, td {
                 
             </b>
             <table>
+                    <tr style="background-color: red;">
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <!-- ... -->
+                    </tr>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                        <!-- ... -->
+                    </tr>
+                    <!-- ... -->
+                </table>
+                  
                 <thead>
                     <tr>
                         <th>Column 1</th>
