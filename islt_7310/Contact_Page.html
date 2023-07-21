@@ -110,6 +110,7 @@ table, th, td {
     border-collapse: collapse;
 }
     </style>
+    </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav.css">
 </head>
@@ -145,72 +146,72 @@ table, th, td {
         <a href="mailto:alr9kf@umsystem.edu?subject=Portfolio/Professional Website Contact">
             <button type="button">Email me directly</button>
         </a>
-       </section>
+    </section>
     <footer style="background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');">
-        <footer class="fade-in">
+        <div class="fade-in">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-                <p>
-                  <i class="fas fa-heart"></i> 
-                  &copy; 2023 by Alex Reddy 
-                  <i class="fas fa-envelope"></i> 
-                </p>
-                <p><img class="w3-animate-fading" <img id="footer-icon" src="email_icon.png" alt="" Email: <a href="mailto:alr9kf@umsystem.edu">alr9kf@umsystem.edu</a></p>
-                <p><img class="w3-animate-fading" <img id="footer-icon" src="phone_icon.png" alt=""> Phone: 888-888-8888</p>
-                <footer class="fade-in"></footer>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column 1</th>
-                            <th>Column 2</th>
-                            <th>Column 3</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Row 1, Column 1</td>
-                            <td>Row 1, Column 2</td>
-                            <td>Row 1, Column 3</td>
-                        </tr>
-                        <tr>
-                            <td>Row 2, Column 1</td>
-                            <td>Row 2, Column 2</td>
-                            <td>Row 2, Column 3</td>
-                        </tr>
-                        <tr>
-                            <td>Row 3, Column 1</td>
-                            <td>Row 3, Column 2</td>
-                            <td>Row 3, Column 3</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </footer>
+            <p>
+              <i class="fas fa-heart"></i> 
+              &copy; 2023 by Alex Reddy 
+              <i class="fas fa-envelope"></i> 
+            </p>
+            <p><img class="w3-animate-fading" id="footer-icon" src="email_icon.png" alt=""> Email: <a href="mailto:alr9kf@umsystem.edu">alr9kf@umsystem.edu</a></p>
+            <p><img class="w3-animate-fading" id="footer-icon" src="phone_icon.png" alt=""> Phone: 888-888-8888</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                        <th>Column 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1, Column 1</td>
+                        <td>Row 1, Column 2</td>
+                        <td>Row 1, Column 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2, Column 1</td>
+                        <td>Row 2, Column 2</td>
+                        <td>Row 2, Column 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 3, Column 1</td>
+                        <td>Row 3, Column 2</td>
+                        <td>Row 3, Column 3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </footer>
     <script>
-              var btn = document.getElementById('mobile-menu-btn');
-                var menu = document.getElementById('menu');
-        
-                btn.addEventListener('click', function() {
-                    menu.classList.toggle('showMenu');
-                });
+        var btn = document.getElementById('mobile-menu-btn');
+          var menu = document.getElementById('menu');
+  
+          btn.addEventListener('click', function() {
+              menu.classList.toggle('showMenu');
+          });
 function validateEmail(emailField){
-    var email = emailField.value;
-    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+var email = emailField.value;
+var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
-    if (reg.test(email) == false) 
-    {
-        alert('Invalid Email Address');
-        return false;
-    }
+if (reg.test(email) == false) 
+{
+  alert('Invalid Email Address');
+  return false;
+}
 
-    return true;
+return true;
 
 }
 
 // Add event listener to form submit
 document.querySelector('.contact-form form').addEventListener('submit', function(e){
-  var emailField = document.querySelector('.contact-form input[type="email"]');
-  if(!validateEmail(emailField)){
-    e.preventDefault();
-  }
+var emailField = document.querySelector('.contact-form input[type="email"]');
+if(!validateEmail(emailField)){
+e.preventDefault();
+}
 });
 
 </script>
