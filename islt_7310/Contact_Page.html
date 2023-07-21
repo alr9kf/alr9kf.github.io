@@ -155,6 +155,28 @@
                 btn.addEventListener('click', function() {
                     menu.classList.toggle('showMenu');
                 });
-            </script>
+function validateEmail(emailField){
+    var email = emailField.value;
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+    if (reg.test(email) == false) 
+    {
+        alert('Invalid Email Address');
+        return false;
+    }
+
+    return true;
+
+}
+
+// Add event listener to form submit
+document.querySelector('.contact-form form').addEventListener('submit', function(e){
+  var emailField = document.querySelector('.contact-form input[type="email"]');
+  if(!validateEmail(emailField)){
+    e.preventDefault();
+  }
+});
+
+</script>
 </body>
 </html>
