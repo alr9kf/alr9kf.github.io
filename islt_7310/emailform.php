@@ -1,11 +1,16 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    $first_name = filter_var($_POST['first_name'], FILTER_SANITIZE_STRING);
+    $last_name = filter_var($_POST['last_name'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      echo "Invalid email format";
+      exit;
+    }
 
     // prepare email
     $to = 'alexreddy12@gmail.com';
@@ -15,8 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // send email
     if(mail($to, $subject, $body)){
         echo "Message Sent!";
-    }else{
+    } else {
         echo "Failed to Send!";
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
     }
 }
 ?>
