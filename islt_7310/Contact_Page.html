@@ -9,21 +9,8 @@
         tr:last-child {
             background-color: red;
         }
-        <table>
-  <tr>
-    <td>Data 1.1</td>
-    <td>Data 1.2</td>
-  </tr>
-  <tr>
-    <td>Data 2.1</td>
-    <td>Data 2.2</td>
-  </tr>
-  <tr> <!-- This is the last row, which will be colored red -->
-    <td>Data 3.1</td>
-    <td>Data 3.2</td>
-  </tr>
       
-      body {
+        body {
             display: flex;
             flex-direction: column;
             height: 100vh;
@@ -42,13 +29,11 @@
             margin-right: 1em;
         }
 
-        /* dropdown container */
         .dropdown {
             position: relative;
             display: inline-block;
         }
 
-        /* dropdown items hidden by default */
         .dropdown-content {
             display: none;
             position: absolute;
@@ -57,12 +42,10 @@
             z-index: 1;
         }
 
-        /* show dropdown items on hover */
         .dropdown:hover .dropdown-content {
             display: block;
         }
 
-        /* Media Query for screens smaller than 600px */
         @media (max-width: 600px) {
             body {
                 padding: 0.5em;
@@ -98,7 +81,6 @@
             display: none;
         }
 
-        /* styles for contact form */
         .contact-form {
             width: 80%;
             margin: 0 auto;
@@ -121,11 +103,10 @@
             cursor: pointer;
         }
 
-/* styles for table */
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
     </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav.css">
@@ -236,4 +217,3 @@ e.preventDefault();
 </script>
 </body>
 </html>
-        
