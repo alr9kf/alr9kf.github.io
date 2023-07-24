@@ -7,9 +7,9 @@
     <link rel="icon" href="https://alr9kf.github.io/islt_7310/heart_icon.png">
     <style>
         tr:last-child {
-    background-color: red;
+            background-color: red;
         }
-<table>
+        <table>
   <tr>
     <td>Data 1.1</td>
     <td>Data 1.2</td>
@@ -127,14 +127,24 @@ table, th, td {
     border-collapse: collapse;
 }
     </style>
-    </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav.css">
 </head>
 <body>
     <figure>
         <table>
-
+          <tr>
+            <td>Data 1.1</td>
+            <td>Data 1.2</td>
+          </tr>
+          <tr>
+            <td>Data 2.1</td>
+            <td>Data 2.2</td>
+          </tr>
+          <tr>
+            <td>Data 3.1</td>
+            <td>Data 3.2</td>
+          </tr>
         </table>
         <figcaption>Table 1: This is a table.</figcaption>
     </figure>
@@ -150,28 +160,21 @@ table, th, td {
             </ul>
         </nav>
         <h2>Contact Me</h2>
-        <nav id="nav_menu">
-            <button id="mobile-menu-btn">☰</button>
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <!-- other navigation items... -->
-            </ul>
-        </nav>
-        <h2>Contact Me</h2>
     </header>
     <section class="contact-form">
         <form action="contact_process.php" method="post">
-            *Required <input type="text" name="first_name" placeholder="First Name" required>
-            *Required <input type="text" name="last_name" placeholder="Last Name" required>
-            *Required <input type="email" name="email" placeholder="Your Email" required>
-            *Required <input type="text" name="subject" value="Portfolio/Professional Website Contact" required>
-            *Required <textarea name="message" placeholder="Your Message" required></textarea>
+            <label>*Required <input type="text" name="first_name" placeholder="First Name" required></label>
+            <label>*Required <input type="text" name="last_name" placeholder="Last Name" required></label>
+            <label>*Required <input type="email" name="email" placeholder="Your Email" required></label>
+            <label>*Required <input type="text" name="subject" value="Portfolio/Professional Website Contact" required></label>
+            <label>*Required <textarea name="message" placeholder="Your Message" required></textarea></label>
             <input type="submit" value="Submit">
         </form>
         <a href="mailto:alr9kf@umsystem.edu?subject=Portfolio/Professional Website Contact">
             <button type="button">Email me directly</button>
         </a>
     </section>
+    <footer>
     <footer style="background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');">
         <div class="fade-in">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
@@ -196,7 +199,6 @@ table, th, td {
                 </thead>
                 <tbody>
                     <tr>
-                        <tr> <!-- This is the first new row, which will be colored red -->
                         <td>Data 4.1</td>
                         <td>Data 4.2</td>
                         <td>Data 4.3</td>
@@ -208,7 +210,7 @@ table, th, td {
                         <td>Data 5.3</td>
                         <td>Data 5.4</td>
                     </tr>
-                    <tr> <!-- This is the new last row, which will be colored red -->
+                    <tr>
                         <td>Data 6.1</td>
                         <td>Data 6.2</td>
                         <td>Data 6.3</td>
@@ -251,3 +253,4 @@ e.preventDefault();
 </script>
 </body>
 </html>
+        
