@@ -22,16 +22,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //Server settings
         $mail->SMTPDebug = 2;                                 
         $mail->isSMTP();                                      
-        $mail->Host = 'smtp.office365.com';  
+        $mail->Host = getenv('SMTP_HOST');  
         $mail->SMTPAuth = true;                               
-        $mail->Username = 'alr9kf@umsystem.edu'; // Replace with your Outlook email
-        $mail->Password = 'Justified122!122'; // Replace with your Outlook password
+        $mail->Username = getenv('SMTP_USER'); // get from environment variable
+        $mail->Password = getenv('SMTP_PASSWORD'); // get from environment variable
         $mail->SMTPSecure = 'tls';                            
-        $mail->Port = 587;                                    
+        $mail->Port = getenv('SMTP_PORT');                                    
 
         //Recipients
-        $mail->setFrom('alr9kf@umsystem.edu', 'Alex Reddy'); // Replace with your Outlook email and your name
-        $mail->addAddress('alr9kf@umsystem.edu', 'Alex Reddy'); 
+        $mail->setFrom(getenv('SMTP_USER'), 'Alex Reddy');
+        $mail->addAddress(getenv('SMTP_USER'), 'Alex Reddy'); 
 
         //Content
         $mail->isHTML(true);                                  

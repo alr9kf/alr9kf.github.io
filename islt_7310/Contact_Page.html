@@ -129,7 +129,7 @@
         <form action="contact_process.php" method="post">
             <label>*Required <input type="text" name="first_name" placeholder="First Name" required></label>
             <label>*Required <input type="text" name="last_name" placeholder="Last Name" required></label>
-            <label>*Required <input type="email" name="email" placeholder="Your Email" required></label>
+            <label>*Required <input type="email" id="email" name="email" placeholder="Your Email" required></label>
             <label>*Required <input type="text" name="subject" value="Portfolio/Professional Website Contact" required></label>
             <label>*Required <textarea name="message" placeholder="Your Message" required></textarea></label>
             <input type="submit" value="Submit">
@@ -196,6 +196,10 @@
         function validateEmail(emailField){
             var email = emailField.value;
             var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            var email = document.getElementById('email');
+    
+email.addEventListener('blur', function() {
+    validateEmail(email);
     
             if (reg.test(email) == false) 
             {
