@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // prepare email
-    $to = 'alexreddy12@gmail.com';
+    $to = 'alr9kf#umsyste.edu';
     $subject = "New Contact Form Submission: ".$subject;
     $body = "You have received a new message from your contact form.\n\n"."Here are the details:\n\nName: ".$first_name." ".$last_name."\n\nEmail: ".$email."\n\nMessage:\n".$message;
 
