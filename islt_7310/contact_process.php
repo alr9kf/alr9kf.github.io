@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'C:\Users\alexr\OneDrive\Desktop\alr9kf.github.io-main\islt_7310'; // adjust this to your path
+require 'C:\Users\alexr\OneDrive\Desktop\alr9kf.github.io-main\islt_7310\vendor\autoload.php'; // adjust this to your path
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = filter_var($_POST['first_name'], FILTER_SANITIZE_STRING);
