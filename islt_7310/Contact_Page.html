@@ -126,7 +126,7 @@
         <h2>Contact Me</h2>
     </header>
     <section class="contact-form">
-        <form action="contact_process.php" method="post">
+        <form action="autoload.php" method="post">
             <label>*Required <input type="text" name="first_name" placeholder="First Name" required></label>
             <label>*Required <input type="text" name="last_name" placeholder="Last Name" required></label>
             <label>*Required <input type="email" name="email" placeholder="Your Email" required></label>
@@ -187,27 +187,24 @@
     </footer>
     <script>
         var btn = document.getElementById('mobile-menu-btn');
-          var menu = document.getElementById('menu');
-  
-          btn.addEventListener('click', function() {
-              menu.classList.toggle('showMenu');
-          });
-function validateEmail(emailField){
-var email = emailField.value;
-var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-
-if (reg.test(email) == false) 
-{
-  alert('Invalid Email Address');
-  return false;
-}
-
-return true;
-
-}
-
-// Add event listener to form submit
-
-</script>
+        var menu = document.getElementById('menu');
+    
+        btn.addEventListener('click', function() {
+            menu.classList.toggle('showMenu');
+        });
+    
+        function validateEmail(emailField){
+            var email = emailField.value;
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    
+            if (reg.test(email) == false) 
+            {
+                alert('Invalid Email Address');
+                return false;
+            }
+    
+            return true;
+        }
+        </script>
 </body>
 </html>
