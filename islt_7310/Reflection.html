@@ -5,85 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel="icon" href="https://alr9kf.github.io/islt_7310/heart_icon.png">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            margin: 0;
-            padding: 1em;
-        }
-
-        nav ul {
-            display: flex;
-            flex-direction: row;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin-right: 1em;
-        }
-
-        /* dropdown container */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* dropdown items hidden by default */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            z-index: 1;
-        }
-
-        /* show dropdown items on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Media Query for screens smaller than 600px */
-        @media (max-width: 600px) {
-            body {
-                padding: 0.5em;
-            }
-
-            nav ul {
-                flex-direction: column;
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                background-color: #333;
-                top: 0;
-                left: -100%;
-                transition: left 0.5s ease;
-            }
-
-            nav ul li {
-                margin: 0;
-                padding: 1em;
-                color: #fff;
-            }
-
-            nav ul.showMenu {
-                left: 0;
-            }
-
-            #mobile-menu-btn {
-                display: block;
-            }
-        }
-
-        #mobile-menu-btn {
-            display: none;
-        }
-
-    </style>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
     <header>
@@ -100,7 +24,7 @@
         </nav>
     </header>
     <h2>Teaching Philosophy</h2>
-    <p> 
+    <p>
         When I was asked what I wanted to do with my life in high school, I stated that I wanted
         to join the military and serve my nation as part of the United States Army. I wanted to
         enlist and specifically focus on becoming an intelligence specialist. After learning that I
@@ -114,6 +38,7 @@
         Although my primary responsibility was to teach, I also had an opportunity to design my teaching
         philosophy. In a sentence, my teaching philosophy is simple: See the larner more than
         the learning experience. 
+        </p>
         <br>
         <p>
         After my experiences with the Red Cross, I became employed with Freedom Mortgage
@@ -141,28 +66,24 @@
         improve learning experiences such as digital images, digital video, virtual reality and more. 
         But what is most important, is the hearts of the learner and the teacher in that both are motivated to do their part.
         </p>    
-        <img src="classroom.jpg" alt="not_found.jpg" width="300" height="300">
-    </p>
+    <img src="classroom.jpg" alt="classroom image" width="300" height="300">
     <footer style="background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');">
-        <footer class="fade-in">
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-                <p>
-                  <i class="fas fa-heart"></i> 
-                  &copy; 2023 by Alex Reddy 
-                  <i class="fas fa-envelope"></i> 
-                </p>
-                <p><img class="w3-animate-fading" <img id="footer-icon" src="email_icon.png" alt="" Email: <a href="mailto:alr9kf@umsystem.edu">alr9kf@umsystem.edu</a></p>
-                <p><img class="w3-animate-fading" <img id="footer-icon" src="phone_icon.png" alt=""> Phone: 888-888-8888</p>
-                <b> Website was updated on 7/24/2023 </b>
-                <footer class="fade-in"></footer>
-            </footer>
-            <script>
-                var btn = document.getElementById('mobile-menu-btn');
-                var menu = document.getElementById('menu');
-        
-                btn.addEventListener('click', function() {
-                    menu.classList.toggle('showMenu');
-                });
-            </script>
-        </body>
-        </html>
+        <p>
+            <i class="fas fa-heart"></i> 
+            &copy; 2023 by Alex Reddy 
+            <i class="fas fa-envelope"></i> 
+        </p>
+        <p><img class="w3-animate-fading" id="footer-icon" src="email_icon.png" alt="Email Icon"> Email: <a href="mailto:alr9kf@umsystem.edu">alr9kf@umsystem.edu</a></p>
+        <p><img class="w3-animate-fading" id="footer-icon" src="phone_icon.png" alt="Phone Icon"> Phone: 888-888-8888</p>
+        <b> Website was updated on 7/24/2023 </b>
+    </footer>
+    <script>
+        var btn = document.getElementById('mobile-menu-btn');
+        var menu = document.getElementById('menu');
+
+        btn.addEventListener('click', function() {
+            menu.classList.toggle('showMenu');
+        });
+    </script>
+</body>
+</html>

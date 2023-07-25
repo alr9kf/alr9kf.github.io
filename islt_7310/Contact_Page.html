@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
     <link rel="icon" href="https://alr9kf.github.io/islt_7310/heart_icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
     <style>
         body {
             display: flex;
@@ -13,23 +15,19 @@
             margin: 0;
             padding: 1em;
         }
-
         nav ul {
             display: flex;
             flex-direction: row;
             list-style-type: none;
             padding: 0;
         }
-
         nav ul li {
             margin-right: 1em;
         }
-
         .dropdown {
             position: relative;
             display: inline-block;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -37,16 +35,13 @@
             min-width: 160px;
             z-index: 1;
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         @media (max-width: 600px) {
             body {
                 padding: 0.5em;
             }
-
             nav ul {
                 flex-direction: column;
                 position: fixed;
@@ -57,31 +52,25 @@
                 left: -100%;
                 transition: left 0.5s ease;
             }
-
             nav ul li {
                 margin: 0;
                 padding: 1em;
                 color: #fff;
             }
-
             nav ul.showMenu {
                 left: 0;
             }
-
             #mobile-menu-btn {
                 display: block;
             }
         }
-
         #mobile-menu-btn {
             display: none;
         }
-
         .contact-form {
             width: 80%;
             margin: 0 auto;
         }
-
         .contact-form input[type="text"],
         .contact-form input[type="email"],
         .contact-form textarea {
@@ -89,7 +78,6 @@
             margin-bottom: 10px;
             padding: 10px;
         }
-
         .contact-form input[type="submit"] {
             width: 100%;
             padding: 10px;
@@ -97,9 +85,8 @@
             color: #fff;
             border: none;
             cursor: pointer;
+        }
     </style>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="nav.css">
 </head>
 <body>
     <header>
@@ -129,7 +116,6 @@
             <button type="button">Email me directly</button>
         </a>
     </section>
-    <footer>
     <footer style="background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');">
         <div class="fade-in">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
@@ -145,27 +131,27 @@
     <script>
         var btn = document.getElementById('mobile-menu-btn');
         var menu = document.getElementById('menu');
-    
+
         btn.addEventListener('click', function() {
             menu.classList.toggle('showMenu');
         });
-    
-        function validateEmail(emailField){
+
+        function validateEmail(emailField) {
             var email = emailField.value;
             var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-            var email = document.getElementById('email');
-    
-email.addEventListener('blur', function() {
-    validateEmail(email);
-    
-            if (reg.test(email) == false) 
-            {
+
+            if (reg.test(email) == false) {
                 alert('Invalid Email Address');
                 return false;
             }
-    
+
             return true;
         }
-        </script>
+        
+        var email = document.getElementById('email');
+        email.addEventListener('blur', function() {
+            validateEmail(email);
+        });
+    </script>
 </body>
 </html>

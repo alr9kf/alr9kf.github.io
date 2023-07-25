@@ -9,6 +9,12 @@
         tr:last-child {
             background-color: red;
         }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
         body {
             display: flex;
             flex-direction: column;
@@ -16,79 +22,9 @@
             margin: 0;
             padding: 1em;
         }
-
-        nav ul {
-            display: flex;
-            flex-direction: row;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin-right: 1em;
-        }
-
-        /* dropdown container */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* dropdown items hidden by default */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            z-index: 1;
-        }
-
-        /* show dropdown items on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Media Query for screens smaller than 600px */
-        @media (max-width: 600px) {
-            body {
-                padding: 0.5em;
-            }
-
-            nav ul {
-                flex-direction: column;
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                background-color: #333;
-                top: 0;
-                left: -100%;
-                transition: left 0.5s ease;
-            }
-
-            nav ul li {
-                margin: 0;
-                padding: 1em;
-                color: #fff;
-            }
-
-            nav ul.showMenu {
-                left: 0;
-            }
-
-            #mobile-menu-btn {
-                display: block;
-            }
-        }
-
-        #mobile-menu-btn {
-            display: none;
-        }
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
+        
     </style>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
 </head>
 <body>
@@ -127,65 +63,63 @@ table, th, td {
             <blockquote>"An <strong>investment</strong> in <em>knowledge</em> pays the <em>best</em> interest"<br>
             <strong>Benjamin Franklin</strong>
             </blockquote>
-            <img src="alex_reddy_pic.jpg" alt="not_found.jpg" width="300" height="300">
-            <p><a href="AlexanderReddyResume.pdf">Link to my resume</a></p>
-        </main>
-        <footer style="background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');">
-            <footer class="fade-in">
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-                    <p>
-                      <i class="fas fa-heart"></i> 
-                      &copy; 2023 by Alex Reddy 
-                      <i class="fas fa-envelope"></i> 
-                    </p>
-                    <p><img class="w3-animate-fading" <img id="footer-icon" src="email_icon.png" alt="" Email: <a href="mailto:alr9kf@umsystem.edu">alr9kf@umsystem.edu</a></p>
-                    <p><img class="w3-animate-fading" <img id="footer-icon" src="phone_icon.png" alt=""> Phone: 888-888-8888</p>
-                    <b>
-                       <h2>
-                        More fun Facts about the author
-                       </h2> 
-                    </b>
-                    <footer class="fade-in"></footer>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Favorite Books</th>
-                                <th>Favorite Movies</th>
-                                <th>Favorite Meals</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>The Circle by Ted Dekker</td>
-                                <td>Jurassic Park</td>
-                                <td>Pizza</td>
-            
-                            </tr>
-                            <tr>
-                                <td>The Hobbit by JRR Tolkein</td>
-                                <td>John Wick</td>
-                                <td>Rigatoni</td>
-            
-                            </tr>
-                            <tr>
-                                <td>Chronicles of Narnia the Lion, Witch and the Wardrobe by C.S. Lewis</td>
-                                <td>Guardians of the Galaxy</td>
-                                <td>Chicken Nuggets</td>
-                
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- ... -->
-                </div>
-                <b> Website was updated on 7/24/2023 </b>
-                </footer>
-                <script>
-                    var btn = document.getElementById('mobile-menu-btn');
-                    var menu = document.getElementById('menu');
-            
-                    btn.addEventListener('click', function() {
-                        menu.classList.toggle('showMenu');
-                    });
-                </script>
-            </body>
-            </html>
+        <img src="alex_reddy_pic.jpg" alt="not_found.jpg" width="300" height="300">
+        <p><a href="AlexanderReddyResume.pdf">Link to my resume</a></p>
+    </main>
+    <footer style="background-image: url('https://alr9kf.github.io/islt_7310/footer_background.jpg');">
+        <div class="fade-in">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+            <p>
+              <i class="fas fa-heart"></i> 
+              &copy; 2023 by Alex Reddy 
+              <i class="fas fa-envelope"></i> 
+            </p>
+            <p>
+                <img class="w3-animate-fading" id="footer-icon" src="email_icon.png" alt=""> Email: <a href="mailto:alr9kf@umsystem.edu">alr9kf@umsystem.edu</a>
+            </p>
+            <p>
+                <img class="w3-animate-fading" id="footer-icon" src="phone_icon.png" alt=""> Phone: 888-888-8888
+            </p>
+            <h2>More fun Facts about the author</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Favorite Books</th>
+                        <th>Favorite Movies</th>
+                        <th>Favorite Meals</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Circle by Ted Dekker</td>
+                        <td>Jurassic Park</td>
+                        <td>Pizza</td>
+    
+                    </tr>
+                    <tr>
+                        <td>The Hobbit by JRR Tolkein</td>
+                        <td>John Wick</td>
+                        <td>Rigatoni</td>
+    
+                    </tr>
+                    <tr>
+                        <td>Chronicles of Narnia the Lion, Witch and the Wardrobe by C.S. Lewis</td>
+                        <td>Guardians of the Galaxy</td>
+                        <td>Chicken Nuggets</td>
+        
+                    </tr>
+                </tbody>
+            </table>
+            <b> Website was updated on 7/24/2023 </b>
+        </div>
+    </footer>
+    <script>
+        var btn = document.getElementById('mobile-menu-btn');
+        var menu = document.getElementById('menu');
+    
+        btn.addEventListener('click', function() {
+            menu.classList.toggle('showMenu');
+        });
+    </script>
+</body>
+</html>
