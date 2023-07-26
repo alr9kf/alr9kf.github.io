@@ -1,7 +1,5 @@
 body {
-  background-color: #808080; 
-}
-
+  background-color: #808080;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -80,7 +78,9 @@ footer a {
   color: #333;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
   border-collapse: collapse;
 }
