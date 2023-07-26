@@ -1,68 +1,78 @@
 .nav-menu ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  .nav-menu ul li {
-    position: relative;
-  }
-  
-  .nav-menu ul li a {
-    text-align: center;
-    display: block;
-    padding: 1em 0;
-    margin: auto;
-    text-decoration: none;
-    background-color: blue;
-    color: white;
-    font-weight: bold;
-    border-right: 2px solid white;
-  }
-  
-  .nav-menu ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-  }
-  
-  .nav-toggle {
-    display: none;
-  }
-  
-  .nav-menu ul li a:hover {
-    background-color: darkblue;
-  }
-  
-  .nav-menu ul li:hover > ul {
-    display: block;
-  }
-  
-  .nav-menu ul li a.lastitem {
-    border-right: none;
-  }
-  
-  .nav-menu ul li a.current {
-    color: yellow;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .nav-menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-menu ul li {
+  position: relative;
+}
+
+.nav-menu ul li a {
+  text-align: center;
+  display: block;
+  padding: 1em 0;
+  margin: auto;
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  border-right: 2px solid white;
+}
+
+.nav-menu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-menu ul li a:hover {
+  background-color: darkblue;
+}
+
+.nav-menu ul li:hover > ul {
+  display: block;
+}
+
+.nav-menu ul li a.lastitem {
+  border-right: none;
+}
+
+.nav-menu ul li a.current {
+  color: yellow;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-menu ul {
       display: none;
       flex-direction: column;
-    }
-  
-    .nav-menu ul li {
-      display: block;
-    }
-  
-    .nav-menu ul li a {
       width: 100%;
-    }
-  
-    .nav-toggle {
-      display: block;
-    }
   }
-  
+
+  .nav-menu ul li {
+      display: block;
+  }
+
+  .nav-menu ul li a {
+      width: 100%;
+      border-right: none;
+  }
+
+  .nav-toggle {
+      display: block;
+  }
+}
+Finally, in your HTML, you should have a button or another clickable element with the class .nav-toggle that the user can click to show and hide the menu on smaller screens. For example:
+
+html
+Copy code
+<button class="nav-toggle">Menu</button>
+
+
+
+
+
