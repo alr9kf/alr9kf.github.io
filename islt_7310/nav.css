@@ -46,6 +46,10 @@
   color: yellow;
 }
 
+.showMenu {
+  display: flex;
+}
+
 @media screen and (max-width: 600px) {
   .nav-menu ul {
       display: none;
@@ -66,11 +70,7 @@
       display: block;
   }
 }
-Finally, in your HTML, you should have a button or another clickable element with the class .nav-toggle that the user can click to show and hide the menu on smaller screens. For example:
 
-html
-Copy code
-<button class="nav-toggle">Menu</button>
 
 
 
