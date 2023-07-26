@@ -28,6 +28,17 @@
 
 .nav-toggle {
   display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.nav-toggle div {
+  width: 2rem;
+  height: 0.25rem;
+  background: white;
 }
 
 .nav-menu ul li a:hover {
@@ -67,7 +78,7 @@
   }
 
   .nav-toggle {
-      display: block;
+      display: flex;
   }
 }
 

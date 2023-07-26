@@ -87,8 +87,8 @@
 
 <body>
     <header>
-        <nav id="nav_menu">
-            <button id="mobile-menu-btn">☰</button>
+        <nav id="nav_menu" class="nav-menu">
+            <button id="nav-toggle">☰</button>
             <ul id="menu">
                 <!-- Here's the dropdown menu added to the "Index" link -->
                 <li class="dropdown">
@@ -150,14 +150,13 @@
             <b>Website was updated on 7/24/2023</b>
         </div>
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var toggle = document.querySelector('.nav-toggle');
-                var menu = document.querySelector('#menu');
-            
-                toggle.addEventListener('click', function () {
-                    menu.classList.toggle('showMenu');
-                });
-            });
+       document.getElementById('nav-toggle').addEventListener('click', function() {
+    var navLinks = document.querySelector('.nav-menu ul');
+    if (navLinks.style.display === "none") {
+        navLinks.style.display = "flex";
+    } else {
+        navLinks.style.display = "none";
+    }
             </script>
     </footer>
 </body>
