@@ -164,13 +164,9 @@
     <script>
         var btn = document.getElementById('mobile-menu-btn');
         var menu = document.getElementById('menu');
-    
+
         btn.addEventListener('click', function() {
-            if(menu.style.display === 'none' || menu.style.display === ''){
-                menu.style.display = 'block';
-            }else{
-                menu.style.display = 'none';
-            }
+            menu.classList.toggle('showMenu');
         });
     </script>
 </body>
