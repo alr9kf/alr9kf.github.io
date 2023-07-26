@@ -150,14 +150,15 @@
             <b>Website was updated on 7/24/2023</b>
         </div>
         <script>
-       document.getElementById('nav-toggle').addEventListener('click', function() {
-    var navLinks = document.querySelector('.nav-menu ul');
-    if (navLinks.style.display === "none") {
-        navLinks.style.display = "flex";
-    } else {
-        navLinks.style.display = "none";
-    }
-            </script>
+            document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+                var navLinks = document.getElementById('menu');
+                if (navLinks.classList.contains('showMenu')) {
+                    navLinks.classList.remove('showMenu');
+                } else {
+                    navLinks.classList.add('showMenu');
+                }
+            });
+        </script>
     </footer>
 </body>
 

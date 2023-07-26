@@ -134,19 +134,13 @@
         <b> Website was updated on 7/24/2023 </b>
     </footer>
     <script>
-        var btn = document.getElementById('mobile-menu-btn');
-        var menu = document.getElementById('menu');
-
-        btn.addEventListener('click', function () {
-            menu.classList.toggle('showMenu');
-        });
-
-        // Hide the mobile menu when a link is clicked
-        var links = document.querySelectorAll('#menu a');
-        links.forEach(function (link) {
-            link.addEventListener('click', function () {
-                menu.classList.remove('showMenu');
-            });
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            var navLinks = document.getElementById('menu');
+            if (navLinks.classList.contains('showMenu')) {
+                navLinks.classList.remove('showMenu');
+            } else {
+                navLinks.classList.add('showMenu');
+            }
         });
     </script>
 </body>

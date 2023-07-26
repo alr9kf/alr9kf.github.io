@@ -14,7 +14,7 @@
   padding: 1em 0;
   margin: auto;
   text-decoration: none;
-  background-color: blue;
+  background-color: black;
   color: white;
   font-weight: bold;
   border-right: 2px solid white;
@@ -42,7 +42,7 @@
 }
 
 .nav-menu ul li a:hover {
-  background-color: darkblue;
+  background-color: black;
 }
 
 .nav-menu ul li:hover > ul {
@@ -54,7 +54,7 @@
 }
 
 .nav-menu ul li a.current {
-  color: yellow;
+  color: gray;
 }
 
 .showMenu {
