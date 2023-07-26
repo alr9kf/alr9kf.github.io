@@ -153,16 +153,12 @@
             document.addEventListener('DOMContentLoaded', function () {
                 var toggle = document.querySelector('.nav-toggle');
                 var menu = document.querySelector('#menu');
-    
+            
                 toggle.addEventListener('click', function () {
-                    if (menu.style.display == 'none' || menu.style.display == '') {
-                        menu.style.display = 'block';
-                    } else {
-                        menu.style.display = 'none';
-                    }
+                    menu.classList.toggle('showMenu');
                 });
             });
-        </script>
+            </script>
     </footer>
 </body>
 
