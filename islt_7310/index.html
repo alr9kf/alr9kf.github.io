@@ -42,11 +42,6 @@
             z-index: 1;
         }
 
-        /* show dropdown items on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
         /* Media Query for screens smaller than 600px */
         @media (max-width: 600px) {
             body {
@@ -76,6 +71,11 @@
 
             #mobile-menu-btn {
                 display: block;
+            }
+
+            /* hide dropdown items on smaller screens */
+            .dropdown-content {
+                display: none;
             }
         }
 
@@ -163,6 +163,22 @@
                 link.addEventListener('click', function () {
                     menu.classList.remove('showMenu');
                 });
+            });
+
+            // Get dropdown element
+            var dropdown = document.querySelector('.dropdown');
+
+            // Toggle dropdown content visibility on click
+            dropdown.addEventListener('click', function (event) {
+                event.stopPropagation();  // stop the click event from bubbling up to other elements
+                var dropdownContent = this.querySelector('.dropdown-content');
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Hide dropdown content when clicking outside of the dropdown
+            window.addEventListener('click', function () {
+                var dropdownContent = dropdown.querySelector('.dropdown-content');
+                dropdownContent.style.display = 'none';
             });
         </script>
     </footer>
